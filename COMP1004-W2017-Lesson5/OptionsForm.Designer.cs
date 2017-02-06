@@ -31,23 +31,27 @@
             this.AcceptButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.FunctionOptionsBox = new System.Windows.Forms.GroupBox();
-            this.SquareRootCheck = new System.Windows.Forms.CheckBox();
             this.ExponentBox = new System.Windows.Forms.CheckBox();
+            this.SquareRootCheck = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.StandardButton = new System.Windows.Forms.RadioButton();
             this.ScientificButton = new System.Windows.Forms.RadioButton();
+            this.StandardButton = new System.Windows.Forms.RadioButton();
+            this.FontButton = new System.Windows.Forms.Button();
+            this.CalculatorFontDialog = new System.Windows.Forms.FontDialog();
             this.FunctionOptionsBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AcceptButton
             // 
+            this.AcceptButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.AcceptButton.Location = new System.Drawing.Point(12, 350);
             this.AcceptButton.Name = "AcceptButton";
             this.AcceptButton.Size = new System.Drawing.Size(136, 50);
             this.AcceptButton.TabIndex = 0;
             this.AcceptButton.Text = "Accept";
             this.AcceptButton.UseVisualStyleBackColor = true;
+            this.AcceptButton.Click += new System.EventHandler(this._acceptButton_Click);
             // 
             // CancelButton
             // 
@@ -58,6 +62,7 @@
             this.CancelButton.TabIndex = 1;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this._cancelButton_Click);
             // 
             // FunctionOptionsBox
             // 
@@ -70,17 +75,6 @@
             this.FunctionOptionsBox.TabStop = false;
             this.FunctionOptionsBox.Text = "Functions";
             // 
-            // SquareRootCheck
-            // 
-            this.SquareRootCheck.AutoSize = true;
-            this.SquareRootCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SquareRootCheck.Location = new System.Drawing.Point(7, 45);
-            this.SquareRootCheck.Name = "SquareRootCheck";
-            this.SquareRootCheck.Size = new System.Drawing.Size(170, 33);
-            this.SquareRootCheck.TabIndex = 0;
-            this.SquareRootCheck.Text = "Square Root";
-            this.SquareRootCheck.UseVisualStyleBackColor = true;
-            // 
             // ExponentBox
             // 
             this.ExponentBox.AutoSize = true;
@@ -92,6 +86,17 @@
             this.ExponentBox.Text = "Exponent";
             this.ExponentBox.UseVisualStyleBackColor = true;
             // 
+            // SquareRootCheck
+            // 
+            this.SquareRootCheck.AutoSize = true;
+            this.SquareRootCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SquareRootCheck.Location = new System.Drawing.Point(7, 45);
+            this.SquareRootCheck.Name = "SquareRootCheck";
+            this.SquareRootCheck.Size = new System.Drawing.Size(170, 33);
+            this.SquareRootCheck.TabIndex = 0;
+            this.SquareRootCheck.Text = "Square Root";
+            this.SquareRootCheck.UseVisualStyleBackColor = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.ScientificButton);
@@ -102,6 +107,18 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Layout";
+            // 
+            // ScientificButton
+            // 
+            this.ScientificButton.AutoSize = true;
+            this.ScientificButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScientificButton.Location = new System.Drawing.Point(7, 84);
+            this.ScientificButton.Name = "ScientificButton";
+            this.ScientificButton.Size = new System.Drawing.Size(131, 33);
+            this.ScientificButton.TabIndex = 1;
+            this.ScientificButton.Text = "Scientific";
+            this.ScientificButton.UseVisualStyleBackColor = true;
+            this.ScientificButton.CheckedChanged += new System.EventHandler(this.StandardButton_CheckedChanged);
             // 
             // StandardButton
             // 
@@ -115,25 +132,30 @@
             this.StandardButton.TabStop = true;
             this.StandardButton.Text = "Standard";
             this.StandardButton.UseVisualStyleBackColor = true;
+            this.StandardButton.CheckedChanged += new System.EventHandler(this.StandardButton_CheckedChanged);
             // 
-            // ScientificButton
+            // FontButton
             // 
-            this.ScientificButton.AutoSize = true;
-            this.ScientificButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScientificButton.Location = new System.Drawing.Point(7, 84);
-            this.ScientificButton.Name = "ScientificButton";
-            this.ScientificButton.Size = new System.Drawing.Size(131, 33);
-            this.ScientificButton.TabIndex = 1;
-            this.ScientificButton.Text = "Scientific";
-            this.ScientificButton.UseVisualStyleBackColor = true;
+            this.FontButton.Location = new System.Drawing.Point(12, 263);
+            this.FontButton.Name = "FontButton";
+            this.FontButton.Size = new System.Drawing.Size(136, 50);
+            this.FontButton.TabIndex = 4;
+            this.FontButton.Text = "Font";
+            this.FontButton.UseVisualStyleBackColor = true;
+            this.FontButton.Click += new System.EventHandler(this._fontButton_Click);
+            // 
+            // CalculatorFontDialog
+            // 
+            this.CalculatorFontDialog.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalculatorFontDialog.MaxSize = 24;
+            this.CalculatorFontDialog.MinSize = 10;
             // 
             // OptionsForm
             // 
-            this.AcceptButton = this.AcceptButton;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.CancelButton = this.CancelButton;
             this.ClientSize = new System.Drawing.Size(430, 412);
             this.ControlBox = false;
+            this.Controls.Add(this.FontButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.FunctionOptionsBox);
             this.Controls.Add(this.CancelButton);
@@ -161,5 +183,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton ScientificButton;
         private System.Windows.Forms.RadioButton StandardButton;
+        private System.Windows.Forms.Button FontButton;
+        private System.Windows.Forms.FontDialog CalculatorFontDialog;
     }
 }
