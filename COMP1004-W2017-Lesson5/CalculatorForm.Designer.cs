@@ -48,7 +48,6 @@
             this.DivideButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
-            this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.CalculatorMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,9 +55,10 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.CalculatorTableLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.CalculatorMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // CalculatorTableLayout
@@ -328,15 +328,6 @@
             this.ResultTextBox.Text = "0";
             this.ResultTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // LogoPictureBox
-            // 
-            this.LogoPictureBox.Image = global::COMP1004_W2017_Lesson5.Properties.Resources.CalculatorLogo;
-            this.LogoPictureBox.Location = new System.Drawing.Point(1, 50);
-            this.LogoPictureBox.Name = "LogoPictureBox";
-            this.LogoPictureBox.Size = new System.Drawing.Size(300, 90);
-            this.LogoPictureBox.TabIndex = 2;
-            this.LogoPictureBox.TabStop = false;
-            // 
             // CalculatorMenuStrip
             // 
             this.CalculatorMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -361,7 +352,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(108, 26);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -376,8 +367,9 @@
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.optionsToolStripMenuItem.Text = "&Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -393,6 +385,15 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // LogoPictureBox
+            // 
+            this.LogoPictureBox.Image = global::COMP1004_W2017_Lesson5.Properties.Resources.CalculatorLogo;
+            this.LogoPictureBox.Location = new System.Drawing.Point(1, 50);
+            this.LogoPictureBox.Name = "LogoPictureBox";
+            this.LogoPictureBox.Size = new System.Drawing.Size(300, 90);
+            this.LogoPictureBox.TabIndex = 2;
+            this.LogoPictureBox.TabStop = false;
             // 
             // CalculatorForm
             // 
@@ -410,9 +411,9 @@
             this.Text = "Calculator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CalculatorForm_FormClosing);
             this.CalculatorTableLayout.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             this.CalculatorMenuStrip.ResumeLayout(false);
             this.CalculatorMenuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

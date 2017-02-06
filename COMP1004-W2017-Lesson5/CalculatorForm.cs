@@ -108,5 +108,14 @@ namespace COMP1004_W2017_Lesson5
             //Step 2: Show the about form with showDialog(a modal method to display the form)
             aboutForm.ShowDialog();
         }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Step 1: Creates a new form
+            OptionsForm optionsForm = new OptionsForm();
+            
+            //Step 2: Show the about form with showDialog(a modal method to display the form)
+            optionsForm.ShowDialog();
+        }
     }
 }
